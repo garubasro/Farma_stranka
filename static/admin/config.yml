@@ -1,0 +1,54 @@
+backend:
+  name: github
+  repo: garubasro/Farma_stranka
+  branch: main
+  auth_endpoint: https://sveltia-cms-auth.pages.dev/auth
+  base_url: https://sveltia-cms-auth.pages.dev
+  auth_scope: repo
+
+media_folder: "static/img"
+public_folder: "/Nova_farma/img"
+
+locale: "sk"
+
+collections:
+  - name: "posts"
+    label: "Články zo záhrady"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Nadpis", name: "title", widget: "string" }
+      - { label: "Dátum publikovania", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false }
+      - { label: "Krátky popis (pre náhľad)", name: "description", widget: "text", required: false }
+      - { label: "Titulný obrázok", name: "thumbnail", widget: "image", required: false }
+      - { label: "Obsah článku", name: "body", widget: "markdown" }
+
+  - name: "zelenina"
+    label: "Zelenina (čo pestujeme)"
+    folder: "content/zelenina"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Názov zeleniny", name: "title", widget: "string" }
+      - { label: "Aktuálne dostupná?", name: "dostupna", widget: "boolean", default: false }
+      - { label: "Obrázok", name: "thumbnail", widget: "image", required: false }
+      - { label: "Popis", name: "body", widget: "markdown" }
+      - { label: "Orientačná cena", name: "cena", widget: "string", required: false, hint: "Napr. '2 €/zväzok' alebo 'podľa dohody'" }
+      - { label: "Poradie zobrazenia", name: "weight", widget: "number", required: false }
+
+  - name: "pages"
+    label: "Stránky"
+    files:
+      - label: "O nás"
+        name: "o-nas"
+        file: "content/o-nas.md"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Obsah", name: "body", widget: "markdown" }
+      - label: "Kontakt"
+        name: "kontakt"
+        file: "content/kontakt.md"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Obsah", name: "body", widget: "markdown" }

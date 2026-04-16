@@ -1,0 +1,40 @@
+# Mainroad i18n – slovenčina (správne kľúče z en.yaml)
+
+- id: recent_title
+  translation: "Posledné články"
+
+- id: categories_title
+  translation: "Kategórie"
+
+- id: tags_title
+  translation: "Štítky"
+
+- id: social_title
+  translation: "Kontakt"
+
+- id: languages_title
+  translation: "Jazyk"
+
+- id: search_placeholder
+  translation: "Hľadať..."
+
+- id: post_nav_prev
+  translation: "Predchádzajúci"
+
+- id: post_nav_next
+  translation: "Nasledujúci"
+
+- id: read_more
+  translation: "Čítať ďalej"
+
+- id: authorbox_name
+  translation: "Autor"
+
+- id: 404_title
+  translation: "404. Stránka nenájdená"
+
+- id: 404_text
+  translation: "Stránka ktorú hľadáte bola presunutá, zmazaná alebo neexistuje. Použite vyhľadávanie alebo choďte na"
+
+- id: 404_linktext
+  translation: "hlavnú stránku"

@@ -1,0 +1,85 @@
+/* ===== Mestská Farma — Mainroad overrides ===== */
+
+/* Zelená namiesto červenej */
+.divider { background: #4a7c3f !important; }
+.menu { border-bottom-color: #4a7c3f !important; background: #2a2a2a !important; }
+.menu__list { background: #2a2a2a !important; }
+.widget__title { border-bottom-color: #4a7c3f !important; }
+.btn:hover { background: #2d5a24 !important; }
+.menu__item:hover { background: #2d5a24 !important; }
+.menu__item--active { background: #2d5a24 !important; }
+.menu__link { color: #fff !important; }
+.menu__link:hover { color: #fff !important; background: #2d5a24 !important; }
+.menu__text { color: #fff !important; }
+.pagination__item:hover,
+.pagination__item--current { background: #4a7c3f !important; }
+.logo__tagline { color: #4a7c3f !important; border-top-color: #ebebeb !important; }
+.content a { color: #4a7c3f !important; }
+.content a:hover { color: #2d5a24 !important; text-decoration: underline; }
+.meta a:hover { color: #4a7c3f !important; }
+.widget-social__link:hover { background: #4a7c3f !important; }
+.tags__badge { background: #4a7c3f !important; }
+.footer { background: #2a2a2a !important; border-top-color: #4a7c3f !important; }
+
+/* Social ikony — správna veľkosť */
+.widget-social__link-icon {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* Hamburger — tri čiarky */
+.menu__btn {
+  background: transparent !important;
+  color: #333 !important;
+  width: auto !important;
+  padding: 8px !important;
+}
+
+.menu__btn-title {
+  background: transparent !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 5px !important;
+  padding: 2px 0 !important;
+  text-align: left !important;
+}
+
+.menu__btn-title::before,
+.menu__btn-title::after {
+  display: none !important;
+}
+
+.hbr {
+  display: block !important;
+  width: 24px !important;
+  height: 3px !important;
+  background: #333 !important;
+  border-radius: 2px !important;
+}
+
+/* Plávajúce WhatsApp tlačidlo */
+#whatsapp-float {
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  left: auto !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 56px !important;
+  height: 56px !important;
+  background: #25D366 !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.5) !important;
+  text-decoration: none !important;
+  transition: transform 0.2s;
+  transform: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#whatsapp-float:hover {
+  transform: scale(1.1) !important;
+}

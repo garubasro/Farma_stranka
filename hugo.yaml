@@ -1,0 +1,96 @@
+baseURL: "https://garubasro.github.io/Farma_stranka/"
+languageCode: "sk"
+defaultContentLanguage: "sk"
+title: "Mestská Farma Bratislava"
+theme: "mainroad"
+pagination:
+  pagerSize: 10
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+ignoreLogs: ['warning-goldmark-raw-html']
+
+Author:
+  name: "Mestská Farma Bratislava"
+
+params:
+  description: "Čerstvá zelenina priamo z bratislavského poľa. Pestujeme prírodným spôsobom, bez chémie."
+  copyright: "Garuba s.r.o. | Mestská Farma Bratislava"
+  opengraph: true
+  schema: true
+  twitter_cards: false
+  readmore: true
+  authorbox: false
+  pager: true
+  post_meta: ["date"]
+  mainSections: ["posts"]
+  highlight_color: "#4a7c3f"
+  customCSS:
+    - "css/farma.css"
+
+  logo:
+    image: "img/Logo-mensie.png"
+    title: "Mestská Farma Bratislava"
+    subtitle: "Farma v meste je na mieste"
+
+  thumbnail:
+    visibility: ["list"]
+
+  sidebar:
+    home: false
+    list: "right"
+    single: false
+    widgets: ["search", "recent", "social"]
+
+  widgets:
+    recent_num: 5
+    social:
+      cached: false
+      facebook: "MestskaFarma"
+      instagram: "mestska_farma"
+      custom:
+        - title: "WhatsApp"
+          url: "https://wa.me/421902192892"
+          icon: "whatsapp.svg"
+        - title: "Email"
+          url: "mailto:garuba.sro@gmail.com"
+          icon: "email.svg"
+        - title: "Telefón"
+          url: "tel:+421902192892"
+          icon: "phone.svg"
+
+menu:
+  main:
+    - identifier: posts
+      name: "Zápisky zo záhrady"
+      url: /posts/
+      weight: 10
+    - identifier: zelenina
+      name: "🥬 Zelenina"
+      url: /zelenina/
+      weight: 20
+    - identifier: onas
+      name: "O nás"
+      url: /o-nas/
+      weight: 30
+    - identifier: kontakt
+      name: "📲 Kontakt"
+      url: /kontakt/
+      weight: 40
+
+taxonomies:
+  tag: tags
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
