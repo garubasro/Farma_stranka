@@ -18,7 +18,16 @@
         </div>
       </article>
       {{ end }}
-      {{ template "_internal/pagination.html" . }}
+      {{ if gt .Paginator.TotalPages 1 }}
+      <nav class="pagination">
+        {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}" class="pagination__item">← Novšie</a>
+        {{ end }}
+        {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}" class="pagination__item">Staršie →</a>
+        {{ end }}
+      </nav>
+      {{ end }}
     </main>
     <aside class="site-sidebar">
       {{ partial "sidebar-widgets.html" . }}
