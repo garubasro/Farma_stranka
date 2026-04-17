@@ -39,6 +39,29 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      - name: Shuffle background images
+        run: |
+          python3 - <<'PYEOF'
+          import os, random, shutil
+          img_dir = "static/img"
+          names = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"]
+          # Skontroluj ci vsetky existuju
+          existing = [n for n in names if os.path.exists(os.path.join(img_dir, n))]
+          if len(existing) == len(names):
+              # Nahodne zamiesa mena
+              shuffled = existing[:]
+              while shuffled == existing:
+                  random.shuffle(shuffled)
+              # Premenuj cez docasne mena
+              for i, name in enumerate(existing):
+                  shutil.copy(os.path.join(img_dir, name), os.path.join(img_dir, f"_tmp_{i}.jpg"))
+              for i, name in enumerate(shuffled):
+                  os.rename(os.path.join(img_dir, f"_tmp_{i}.jpg"), os.path.join(img_dir, name))
+              print("Obrazky zamieshane:", list(zip(existing, shuffled)))
+          else:
+              print("Nie vsetky obrazky najdene, preskakujem shuffle")
+          PYEOF
+
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production

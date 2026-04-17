@@ -292,7 +292,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/Farma_stranka/img/2.jpg') center/cover no-repeat;
+  background: var(--bg-img) center/cover no-repeat;
   opacity: 0.25;
   z-index: 0;
 }
@@ -352,7 +352,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/Farma_stranka/img/3.jpg') center/cover no-repeat;
+  background: var(--bg-img) center/cover no-repeat;
   opacity: 0.25;
   z-index: 0;
 }
@@ -535,7 +535,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/Farma_stranka/img/4.jpg') center/cover no-repeat;
+  background: var(--bg-img) center/cover no-repeat;
   opacity: 0.35;
   z-index: 0;
 }
