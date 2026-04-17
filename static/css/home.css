@@ -118,7 +118,7 @@
 .hero__bg {
   position: absolute;
   inset: -50px;
-  background: #2d4a1e url('/img/kel.jpg') center/cover no-repeat;
+  background: #2d4a1e url('/Farma_stranka/img/kel.jpg') center/cover no-repeat;
   will-change: transform;
 }
 
