@@ -118,7 +118,7 @@
 .hero__bg {
   position: absolute;
   inset: -50px;
-  background: #2d4a1e url('/Farma_stranka/img/kel.jpg') center/cover no-repeat;
+  background: #2d4a1e url('/Farma_stranka/img/1.jpg') center/cover no-repeat;
   will-change: transform;
 }
 
@@ -285,6 +285,21 @@
 /* ===== O NÁS ===== */
 .home-about {
   background: #fff;
+  position: relative;
+}
+
+.home-about::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/Farma_stranka/img/2.jpg') center/cover no-repeat;
+  opacity: 0.08;
+  z-index: 0;
+}
+
+.home-about .home-section__inner {
+  position: relative;
+  z-index: 1;
 }
 
 .home-about__img {
@@ -330,6 +345,21 @@
 /* ===== ZELENINA ===== */
 .home-zelenina {
   background: var(--green-light);
+  position: relative;
+}
+
+.home-zelenina::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/Farma_stranka/img/3.jpg') center/cover no-repeat;
+  opacity: 0.06;
+  z-index: 0;
+}
+
+.home-zelenina .home-section__inner {
+  position: relative;
+  z-index: 1;
 }
 
 .home-zelenina__sub {
@@ -498,6 +528,21 @@
 .home-kontakt {
   background: var(--green-dark);
   color: #fff;
+  position: relative;
+}
+
+.home-kontakt::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/Farma_stranka/img/4.jpg') center/cover no-repeat;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.home-kontakt .home-section__inner {
+  position: relative;
+  z-index: 1;
 }
 
 .home-kontakt__title {
