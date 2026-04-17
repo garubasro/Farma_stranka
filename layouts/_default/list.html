@@ -1,0 +1,28 @@
+{{ define "main" }}
+<div class="site-page">
+  <div class="site-page__inner">
+    <main class="site-main">
+      <h1 class="site-page__title">{{ .Title }}</h1>
+      {{ range .Paginator.Pages }}
+      <article class="post-card">
+        {{ if .Params.thumbnail }}
+        <a href="{{ .Permalink }}" class="post-card__img-wrap">
+          <div class="post-card__img" style="background-image:url('{{ .Params.thumbnail }}')"></div>
+        </a>
+        {{ end }}
+        <div class="post-card__body">
+          <span class="post-card__date">{{ .Date.Format "2. 1. 2006" }}</span>
+          <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          <p>{{ .Summary | plainify | truncate 150 }}</p>
+          <a href="{{ .Permalink }}" class="post-card__more">Čítať ďalej →</a>
+        </div>
+      </article>
+      {{ end }}
+      {{ template "_internal/pagination.html" . }}
+    </main>
+    <aside class="site-sidebar">
+      {{ partial "sidebar-widgets.html" . }}
+    </aside>
+  </div>
+</div>
+{{ end }}
